@@ -53,7 +53,12 @@
 
           <aside class="notes">
             <pre>
-              test
+will be prepared to perform simple tasks using a version control system
+to learn more from other documents that may lack a high-level coneptual overview
+
+Mercurial (Hg), Git, and Subversion (SVN)
+
+
             </pre>
           </aside>
         </section>
@@ -72,24 +77,699 @@
         </section>
 
         <section>
-          <h2>VCS</h2>
-          <p>
-            <h4>Version Control System</h4>
-            <h4>Revision Control System</h4>
-            
-            asd
-          </p>
+          <section>
+            <h2>VCS: Purposes</h2>
+            <p>
+              <h4>Version/Revision Control System</h4>
+
+              <ul>
+                <li>enables multiple people to simultaneously work on a single project
+                <li>integrates work done simultaneously by different team members
+                <li>gives access to historical versions of your project
+              </ul>
+            </p>
+            <aside class="notes">
+              <pre>
+ПЗ для роботи з інф що змінюється
+декілька версій одного і того ж документа + історія
+
+записує зміни у файл або набір файлів протягом деякого часу,
+ви зможете повернутися до певної версії пізнише
+
+в розробці - для збер сорсів
+
+кожен - редагує свою копію файлів, і вибирає шо розшарити з іншими
+локальні зміни одного не діють на інших
+
+multiple computers
+it is valuable even if you are working by yourself
+
+conflicting edits - human assistance
+
+insurance against computer crashes or data lossage
+If you make a mistake, you can roll back to a previous version
+You can reproduce and understand a bug report on a past version of your software
+
+
+              </pre>
+            </aside>
+          </section>
+
+          <section>
+            <h3>Example: Wikipedia history of changes</h3>
+            <p>
+              <img class="no-border" src="http://courseware.hbs.edu/public/cases/wikipedia/images/exhibit7.jpg" />
+            </p>
+            <aside class="notes">
+              <pre>
+              </pre>
+            </aside>
+          </section>
+
+          <section>
+            <h3>Example: history panel in Photoshop</h3>
+            <p>
+              <img class="no-border" src="http://simplykellydesigns.com/blog/wp-content/uploads/2011/07/HistoryWindow.jpg" />
+            </p>
+            <aside class="notes">
+              <pre>
+              </pre>
+            </aside>
+          </section>
         </section>
 
         <section>
-          <h2>Git</h2>
-          <p>
-            <h4>essential professional tool</h4>
-            <!-- Git is a version-control system.<br/>
-            You will love it, then hate it, then praise it.<br/>
-            But you must know it.<br/>
-            Git is one of those things that non-developers either haven't heard of or don't understand and it's a dividing line between hobby hacking and using industry best-practices to keep your code base safely version-controlled and stored in the cloud. -->
-          </p>
+          <section>
+            <h3>Local version control</h3>
+            <p>
+              copy to separate directory (project-25-12-2015, ...).<br/>
+              <img class="no-border" src="http://git-scm.com/book/en/v2/book/01-introduction/images/local.png" width="60%" />
+            </p>
+            <aside class="notes">
+              <pre>
+              </pre>
+            </aside>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h3>Repositories and working copies</h3>
+            <p>
+              <b>Repository</b> - a database of changes<br/>
+              <b>working copy</b> - a local copy of Repository<br/>
+
+              <br/>
+
+              <img class="no-border" src="https://homes.cs.washington.edu/~mernst/advice/version-control-fig1.png" width="25%" />
+            </p>
+            <aside class="notes">
+              <pre>
+working copy = checkout == is your personal copy of all the files in the project
+
+make arbitrary edits to this copy, without affecting your teammates
+When you are happy with your edits, you commit your changes to a repository
+              </pre>
+            </aside>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Terms</h2>
+          </section>
+
+          <section>
+            <h2>Repository</h2>
+            <p>
+              is a database of all the edits to,<br/>
+              and/or historical versions (snapshots) of your project.<br/>
+
+              <br/>
+              <br/>
+
+              local repository and the central repository
+
+              <br/>
+
+              <img class="no-border" src="http://38.media.tumblr.com/430fea7a718bfb59ce40b4df508fedb2/tumblr_inline_mz52huRVwv1rrwt81.png" />
+            </p>
+          </section>
+
+          <section>
+            <h2>Working copy (checkout)</h2>
+            <p>
+              your personal copy of repository
+
+              <br/>
+              <br/>
+
+              <img class="no-border" src="http://www.darwinbiler.com/assets/2-tree-New-Page.jpeg" />
+            </p>
+          </section>
+
+          <section>
+            <h2>Checkout / Clone</h2>
+            <p>
+              action, to copy a remote repository to your local
+            </p>
+          </section>
+
+          <section>
+            <h2>Commit</h2>
+            <p>
+              action, that you made to share your changes with other teammates.<br/>
+              uploading your local changes to repository
+            </p>
+          </section>
+
+          <section>
+            <h2>Update</h2>
+            <p>
+              action, that you made to make your working copy up-to-date with remote repository
+            </p>
+          </section>
+
+          <section>
+            <h2>Changeset / Changelist</h2>
+            <p>
+              a named set of changes
+            </p>
+          </section>
+
+          <section>
+            <h2>Branching</h2>
+            <p>
+              <img class="no-border" src="https://homes.cs.washington.edu/~mernst/advice/version-control-fig4.png" />
+            </p>
+          </section>
+
+          <section>
+            <h2>Branch</h2>
+            <p>
+              a copy of repository
+
+              <br/>
+              <br/>
+
+              <img class="no-border" src="http://blog.codinghorror.com/content/images/uploads/2007/10/6a0120a85dcdae970b0120a86da788970b-pi.png" />
+            </p>
+          </section>
+
+          <section>
+            <h2>Conflict</h2>
+            <p>
+              a case, when few users made not-similar changes in one file
+
+              <br/>
+              <br/>
+
+              <img class="no-border" src="http://www.ep.sci.hokudai.ac.jp/~epnetfan/zagaku/2008/1003/uwabami/src/orig/vcs-conflict.png" width="50%" />
+            </p>
+          </section>
+
+          <section>
+            <h2>Head</h2>
+            <p>
+              a latest version for branch
+            </p>
+          </section>
+
+          <section>
+            <h2>Merge</h2>
+            <p>
+              an action to combine independent changes to one version
+
+              <br/>
+              <br/>
+
+              <img class="no-border" src="https://wiki.php.net/_media/vcs/php-merge-4.png" width="50%" />
+            </p>
+          </section>
+
+          <section>
+            <h2>Revision</h2>
+            <p>
+              a version of document
+            </p>
+          </section>
+
+          <section>
+            <h2>Tag</h2>
+            <p>
+              a label for specific version of document
+            </p>
+          </section>
+
+          <section>
+            <h2>Trunk / Master</h2>
+            <p>
+              a main branch for work
+            </p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Distributed and centralized version control</h2>
+            <p>
+              <ul>
+                <li>centralized
+                  <br/>
+                  <small>exmaple: Subversion</small>
+
+                <li>distributed
+                  <br/>
+                  <small>more modern, runs faster, is less prone to errors, has more features, more complex to understand</small>
+                  <br/>
+                  <small>exmaple: Mercurial, Git</small>
+              </ul>
+            </p>
+            <aside class="notes">
+              <pre>
+Децентралізовані
+is the number of repositories
+              </pre>
+            </aside>
+          </section>
+
+          <section>
+            <p>
+              <img class="no-border" src="http://www.depo.ua/static/files/gallery_uploads/images/0%D0%B2%D0%BE%D0%BA%D0%B7%D0%B0%D0%BB.jpg" />
+            </p>
+          </section>
+
+          <section>
+            <p>
+              <img class="no-border" src="https://homes.cs.washington.edu/~mernst/advice/version-control-fig2.png" />
+              
+              <br/>
+              <br/>
+
+              there is just one repository.
+
+              <br/>
+
+              <ul>
+                <li>You commit
+                <li>They update
+              </ul>
+            </p>
+            <aside class="notes">
+              <pre>
+there is just one central repository
+              </pre>
+            </aside>
+          </section>
+
+          <section>
+            <p>
+              <img class="no-border" src="https://homes.cs.washington.edu/~mernst/advice/version-control-fig3.png" />
+
+              <br/>
+              <br/>
+
+              there are multiple repositories
+
+              <br/>
+
+              <ul>
+                <li>You commit
+                <li>You push
+                <li>They pull
+                <li>They update
+              </ul>
+            </p>
+            <aside class="notes">
+              <pre>
+each user gets his or her own repository and working copy
+              </pre>
+            </aside>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Conflicts</h2>
+            <p>
+              the final version is a merge of original version and edit.
+              <br/>
+              <br/>
+              occurs when two different users make simultaneous, different changes to the same line of a file
+            </p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Merging changes</h2>
+            <p>
+              
+            </p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>General Workflow</h2>
+            <aside class="notes">
+              <pre>
+Каждая система управления версиями имеет свои специфические особенности
+              </pre>
+            </aside>
+          </section>
+
+          <section>
+            <h2>Initial initialization</h2>
+            <p>
+              clone the project (tree of files/directories)<br/>
+              from remote to local (filesystem)<br/>
+              with specific version
+            </p>
+          </section>
+
+          <section>
+            <h2>The Daily Cycle</h2>
+            <p>
+              <ul>
+                <li>update the local copy to latest
+                <li>make changes on local
+                <li>sharing (saving) local changes with others
+              </ul>
+            </p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Git</h2>
+            <p>
+              <h4>essential professional tool</h4>
+            </p>
+          </section>
+
+          <section>
+            <h2>Git: Evolution</h2>
+            <p>
+              <ul>
+                <li>1991-2002 - Linux root, archives & patches (BitKeeper)
+                <li>2005 - Linux developers implemented own VCS (Git)
+              </ul>
+            </p>
+          </section>
+
+          <section>
+            <h2>Git</h2>
+            <p>
+              <img class="no-border" src="http://git-scm.com/book/en/v2/book/01-introduction/images/deltas.png" />
+            </p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Git: Getting and Creating Projects</h2>
+            <p>
+              <pre><code data-trim contenteditable style="padding:20px">
+# initializes a directory as a Git repository
+$ git init
+
+# copy a git repository so you can add to it
+$ git clone git://github.com/schacon/simplegit.git
+              </code></pre>
+            </p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Git: Basic Snapshotting</h2>
+            <p>
+              <ul>
+                <li>add
+                <li>status
+                <li>diff
+                <li>commit
+                <li>reset
+                <li>rm, mv
+                <li>stash
+              </ul>
+            </p>
+          </section>
+
+          <section>
+            <h2>git add</h2>
+            <p>
+              adds file contents to the staging area
+              <br/>
+
+              <pre><code data-trim contenteditable style="padding:20px">
+$ git status -s
+?? README
+?? hello.rb
+
+$ git add README hello.rb
+
+$ git status -s
+A  README
+A  hello.rb
+
+# edit & save the "README" file
+
+$ git status -s
+AM README
+A  hello.rb
+              </code></pre>
+            </p>
+          </section>
+
+          <section>
+            <h2>git status</h2>
+            <p>
+              adds file contents to the staging area
+              <br/>
+
+              <pre><code data-trim contenteditable style="padding:20px">
+$ git status -s
+AM README
+A  hello.rb
+
+$ git status -s
+M  README
+ D hello.rb
+              </code></pre>
+            </p>
+          </section>
+
+          <section>
+            <h2>git diff</h2>
+            <p>
+              shows diff of what is staged and what is modified but unstaged
+              <br/>
+
+              <pre><code data-trim contenteditable style="padding:20px">
+$ vim hello.rb
+$ git status -s
+ M hello.rb
+
+$ git diff
+diff --git a/hello.rb b/hello.rb
+index d62ac43..8d15d50 100644
+--- a/hello.rb
++++ b/hello.rb
+@@ -1,7 +1,7 @@
+ class HelloWorld
+   def self.hello
+-    puts "hello world"
++    puts "hola mundo"
+   end
+ end
+              </code></pre>
+            </p>
+          </section>
+
+          <section>
+            <h2>git commit</h2>
+            <p>
+              records a snapshot of the staging area
+              <br/>
+
+              <pre><code data-trim contenteditable style="padding:20px">
+$ git config --global user.name 'Your Name'
+$ git config --global user.email you@somedomain.com
+
+$ git add hello.rb 
+$ git status -s
+M  hello.rb
+
+$ git commit -m 'my hola mundo changes'
+[master 68aa034] my hola mundo changes
+ 1 files changed, 2 insertions(+), 1 deletions(-)
+
+$ git status
+# On branch master
+nothing to commit (working directory clean)
+              </code></pre>
+            </p>
+          </section>
+
+          <section>
+            <h2>git reset</h2>
+            <p>
+              undo changes and commits
+              <br/>
+
+              <pre><code data-trim contenteditable style="padding:20px">
+$ git status -s
+ M README
+ M hello.rb
+
+$ git add .
+$ git status -s
+M  README
+M  hello.rb
+
+$ git reset HEAD -- hello.rb 
+Unstaged changes after reset:
+M hello.rb
+
+$ git status -s
+M  README
+ M hello.rb
+              </code></pre>
+            </p>
+          </section>
+
+          <section>
+            <h2>git rm</h2>
+            <p>
+              remove files from the staging area
+              <br/>
+
+              <pre><code data-trim contenteditable style="padding:20px">
+$ git rm hello.rb
+              </code></pre>
+            </p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Git: Branching and Merging</h2>
+            <p>
+              <ul>
+                <li>branch
+                <li>checkout
+                <li>merge
+                <li>log
+                <li>tag
+              </ul>
+            </p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Git: Sharing and Updating Projects</h2>
+            <p>
+              <ul>
+                <li>fetch, pull
+                <li>push
+                <li>remote
+              </ul>
+            </p>
+          </section>
+
+          <section>
+            <h2>git remote</h2>
+            <p>
+              list, add and delete remote repository aliases
+              <br/>
+
+              <pre><code data-trim contenteditable style="padding:20px">
+$ git remote
+origin
+
+$ git remote -v
+origin  git@github.com:github/git-reference.git (fetch)
+origin  git@github.com:github/git-reference.git (push)
+              </code></pre>
+            </p>
+          </section>
+
+          <section>
+            <h2>git fetch</h2>
+            <p>
+              download new branches and data from a remote repository
+              <br/>
+
+              <pre><code data-trim contenteditable style="padding:20px">
+              </code></pre>
+            </p>
+          </section>
+
+          <section>
+            <h2>git pull</h2>
+            <p>
+              fetch from a remote repo and try to merge into the current branch
+              <br/>
+
+              <pre><code data-trim contenteditable style="padding:20px">
+$ git fetch github
+remote: Counting objects: 4006, done.
+remote: Compressing objects: 100% (1322/1322), done.
+remote: Total 2783 (delta 1526), reused 2587 (delta 1387)
+Receiving objects: 100% (2783/2783), 1.23 MiB | 10 KiB/s, done.
+Resolving deltas: 100% (1526/1526), completed with 387 local objects.
+From github.com:schacon/hw
+   8e29b09..c7c5a10  master     -> github/master
+   0709fdc..d4ccf73  c-langs    -> github/c-langs
+   6684f82..ae06d2b  java       -> github/java
+ * [new branch]      ada        -> github/ada
+ * [new branch]      lisp       -> github/lisp
+              </code></pre>
+            </p>
+          </section>
+
+          <section>
+            <h2>git push</h2>
+            <p>
+              push your new branches and data to a remote repository
+              <br/>
+
+              <pre><code data-trim contenteditable style="padding:20px">
+$ git push github master
+Counting objects: 25, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (25/25), done.
+Writing objects: 100% (25/25), 2.43 KiB, done.
+Total 25 (delta 4), reused 0 (delta 0)
+To git@github.com:schacon/hw.git
+ * [new branch]      master -> master
+              </code></pre>
+            </p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Git: Inspection and Comparison</h2>
+            <p>
+              <ul>
+                <li>log
+                <li>diff
+              </ul>
+            </p>
+          </section>
+
+          <section>
+            <h2>git log</h2>
+            <p>
+              filter your commit history
+              <br/>
+
+              <pre><code data-trim contenteditable style="padding:20px">
+$ git log --author=Linus --oneline -5
+81b50f3 Move 'builtin-*' into a 'builtin/' subdirectory
+3bb7256 make "index-pack" a built-in
+377d027 make "git pack-redundant" a built-in
+b532581 make "git unpack-file" a built-in
+112dd51 make "mktag" a built-iner
+              </code></pre>
+            </p>
+          </section>
+
+          <section>
+            <h2>git diff</h2>
+            <p>
+              <pre><code data-trim contenteditable style="padding:20px">
+$ git diff v0.9 --stat
+ README  |    2 +-
+ ruby.rb |    4 ++--
+ 2 files changed, 3 insertions(+), 3 deletions(-)
+              </code></pre>
+            </p>
+          </section>
         </section>
 
         <section>
@@ -100,13 +780,114 @@
         </section>
 
         <section>
+          <section>
+            <h2>Version Control best practices</h2>
+          </section>
+
+          <section>
+            <h2>Advice: Use a descriptive commit message</h2>
+            <p>
+              write a good commit message<br/>
+              to indicate the purpose of the changes
+            </p>
+          </section>
+
+          <section>
+            <h2>Advice: Make each commit a logical unit</h2>
+            <p>
+              each commit should have a single purpose<br/>
+              and should completely implement that purpose
+            </p>
+          </section>
+
+          <section>
+            <h2>Advice: Avoid indiscriminate commits</h2>
+            <p>
+              make a commit with specific files
+            </p>
+          </section>
+
+          <section>
+            <h2>Advice: Incorporate others' changes frequently</h2>
+            <p>
+              work with the most up-to-date version of the files as possible
+            </p>
+            <aside class="notes">
+              <pre>
+very frequently
+to avoid conflicts
+              </pre>
+            </aside>
+          </section>
+
+          <section>
+            <h2>Advice: Share your changes frequently</h2>
+            <p>
+              share a logical unit of work with your colleagues as soon as possible
+            </p>
+            <aside class="notes">
+              <pre>
+              </pre>
+            </aside>
+          </section>
+
+          <section>
+            <h2>Advice: Coordinate with your co-workers</h2>
+            <p>
+              strive to avoid conflicts.<br/>
+              to talk with teammates is the best way to avoid conflicts
+            </p>
+            <aside class="notes">
+              <pre>
+              </pre>
+            </aside>
+          </section>
+
+          <section>
+            <h2>Advice: Don't commit generated files</h2>
+            <p>
+              they aren't necessary in version control
+            </p>
+            <aside class="notes">
+              <pre>
+              </pre>
+            </aside>
+          </section>
+        </section>
+
+        <section>
           <h2>Additional materials</h2>
           <p>
             <ul style="font-size:25px">
               <li>
-                <b>...</b>
+                <b>Try Git with Github</b>
                 <br/>
-                <a href="..." target="_blank">...</a>
+                <a href="https://try.github.io/levels/1/challenges/1" target="_blank">https://try.github.io/levels/1/challenges/1</a>
+
+              <li>
+                <b>Learn Git Branching</b>
+                <br/>
+                <a href="http://pcottle.github.io/learnGitBranching/" target="_blank">http://pcottle.github.io/learnGitBranching/</a>
+
+              <li>
+                <b>Good Resources for Learning Git and GitHub</b>
+                <br/>
+                <a href="https://help.github.com/articles/good-resources-for-learning-git-and-github/" target="_blank">https://help.github.com/articles/good-resources-for-learning-git-and-github/</a>
+
+              <li>
+                <b>Pro Git book</b>
+                <br/>
+                <a href="http://git-scm.com/book/en/v2" target="_blank">http://git-scm.com/book/en/v2</a>
+
+              <li>
+                <b>Git Guides</b>
+                <br/>
+                <a href="https://guides.github.com/" target="_blank">https://guides.github.com/</a>
+
+              <li>
+                <b>Git Cheat Sheet</b>
+                <br/>
+                <a href="https://training.github.com/kit/downloads/github-git-cheat-sheet.pdf" target="_blank">https://training.github.com/kit/downloads/github-git-cheat-sheet.pdf</a>
             </ul>
           </p>
         </section>
