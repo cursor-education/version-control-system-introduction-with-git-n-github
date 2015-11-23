@@ -48,7 +48,7 @@
           <br/>
 
           <small style="color:#777; font-size:17px">
-            v1.0
+            v1.3
           </small>
 
           <aside class="notes">
@@ -146,6 +146,28 @@ You can reproduce and understand a bug report on a past version of your software
               copy-paste<br/>
 
               <img class="no-border" src="http://git-scm.com/book/en/v2/book/01-introduction/images/local.png" width="60%" />
+            </p>
+            <aside class="notes">
+              <pre>
+              </pre>
+            </aside>
+          </section>
+
+          <section>
+            <h3>Centralized version control diagram</h3>
+            <p>
+              <img class="no-border" src="https://git-scm.com/figures/18333fig0102-tn.png" width="60%" />
+            </p>
+            <aside class="notes">
+              <pre>
+              </pre>
+            </aside>
+          </section>
+
+          <section>
+            <h3>Distributed version control diagram</h3>
+            <p>
+              <img class="no-border" src="http://git-scm.com/book/en/v2/book/01-introduction/images/distributed.png" width="50%" />
             </p>
             <aside class="notes">
               <pre>
@@ -526,14 +548,41 @@ each user gets his or her own repository and working copy
 
         <section>
           <section>
-            <h2>Git: Getting and Creating Projects</h2>
+            <h2>Git: install</h2>
+            <p>
+              <ul>
+                <li>Linux: http://git-scm.com/download/linux
+                <li>Mac: http://git-scm.com/download/mac
+                <li>Win: http://git-scm.com/download/win
+                <li>Win: https://git-for-windows.github.io/
+                <li>Win: https://desktop.github.com/
+                <li>TortoiseGit
+              </ul>
+            </p>
+          </section>
+
+          <section>
+            <h2>Git: configuring</h2>
             <p>
               <pre><code data-trim contenteditable style="padding:20px">
-# initializes a directory as a Git repository
-$ git init
+$ git config
 
-# copy a git repository so you can add to it
-$ git clone git://github.com/schacon/simplegit.git
+$ git config --global user.name "John Doe"
+$ git config --global user.email johndoe@example.com
+
+$ git config --list
+$ git config user.name
+              </code></pre>
+            </p>
+          </section>
+
+          <section>
+            <h2>Git: help</h2>
+            <p>
+              <pre><code data-trim contenteditable style="padding:20px">
+$ git help command
+$ git command --help
+$ man git-command
               </code></pre>
             </p>
           </section>
@@ -550,9 +599,31 @@ $ git clone git://github.com/schacon/simplegit.git
 
         <section>
           <section>
+            <h2>Git: Creating an Empty Project</h2>
+            <p>
+              <pre><code data-trim contenteditable style="padding:20px">
+# initializes a directory as a Git repository
+$ git init
+              </code></pre>
+            </p>
+          </section>
+
+          <section>
+            <h2>Git: Getting a Project</h2>
+            <p>
+              <pre><code data-trim contenteditable style="padding:20px">
+# copy a git repository so you can add to it
+$ git clone git://github.com/schacon/simplegit.git
+              </code></pre>
+            </p>
+          </section>
+        </section>
+
+        <section>
+          <section>
             <h2>Git: Basic Snapshotting</h2>
             <p>
-              <ul>
+              <ul style="font-size:22px">
                 <li>add
                 <li>status
                 <li>diff
@@ -561,6 +632,11 @@ $ git clone git://github.com/schacon/simplegit.git
                 <li>rm, mv
                 <li>stash
               </ul>
+
+              <br/>
+              <br/>
+
+              <img class="no-border" src="http://git-scm.com/book/en/v2/book/02-git-basics/images/lifecycle.png" width="70%" />
             </p>
           </section>
 
@@ -576,6 +652,7 @@ $ git status -s
 ?? hello.rb
 
 $ git add README hello.rb
+$ git add *.rb
 
 $ git status -s
 A  README
@@ -915,7 +992,10 @@ $ git diff v0.9 --stat
             <h2>Advice: Use a descriptive commit message</h2>
             <p>
               write a good commit message<br/>
-              to indicate the purpose of the changes
+              to indicate the purpose of the changes<br/>
+              <br/>
+
+              <img class="no-border" src="https://imgs.xkcd.com/comics/git_commit.png" />
             </p>
           </section>
 
