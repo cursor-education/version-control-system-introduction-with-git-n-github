@@ -65,7 +65,7 @@ Mercurial (Hg), Git, and Subversion (SVN)
           <h2>Agenda</h2>
           <p>
             <ul>
-              <li>Version Conrol System (VCS)
+              <li>Version Control System (VCS)
               <li>SVN overview
               <li>Mercurial overview
               <li>Git \w commands
@@ -91,27 +91,16 @@ Mercurial (Hg), Git, and Subversion (SVN)
             </p>
             <aside class="notes">
               <pre>
-ПЗ для роботи з інф що змінюється
-декілька версій одного і того ж документа + історія
+програма для роботи з інф що змінюється
 
-записує зміни у файл або набір файлів протягом деякого часу,
-ви зможете повернутися до певної версії пізнише
-
-в розробці - для збер сорсів
-
+проблема: multiple developers
 кожен - редагує свою копію файлів, і вибирає шо розшарити з іншими
-локальні зміни одного не діють на інших
+проблема: декілька версій одного і того ж документа + історія
 
-multiple computers
-it is valuable even if you are working by yourself
+плюс: ви зможете повернутися до певної версії пізніше
+плюс: локальні зміни одного не діють на інших
 
-conflicting edits - human assistance
-
-insurance against computer crashes or data lossage
-If you make a mistake, you can roll back to a previous version
-You can reproduce and understand a bug report on a past version of your software
-
-
+в розробці - для збер сорсів (код, граф ресурси, )
               </pre>
             </aside>
           </section>
@@ -143,13 +132,19 @@ You can reproduce and understand a bug report on a past version of your software
           <section>
             <h3>Local version control</h3>
             <p>
-              copy to separate directory (project-25-12-2015, ...).<br/>
-              copy-paste<br/>
+              copy to separate directory<br/>
+              <small>(project-25-12-2015, backup-qweqwe15, New Folder 283, ...)</small>
+              <br/>
 
-              <img class="no-border" src="http://git-scm.com/book/en/v2/book/01-introduction/images/local.png" width="60%" />
+              <img class="no-border" src="http://git-scm.com/book/en/v2/book/01-introduction/images/local.png" width="50%" />
+
+              <br/>
+              <b>problems? weaknesses? milestones?</b>
+
             </p>
             <aside class="notes">
               <pre>
+cons: copy-paste, speed, manual<br/>
               </pre>
             </aside>
           </section>
@@ -157,10 +152,17 @@ You can reproduce and understand a bug report on a past version of your software
           <section>
             <h3>Centralized version control diagram</h3>
             <p>
-              <img class="no-border" src="https://git-scm.com/figures/18333fig0102-tn.png" width="60%" />
+              <img class="no-border" src="http://new.tinygrab.com/7020c0e8b0682abff9a5e19670fffb76ddc6ad6280.png" width="60%" />
+
+              <br/>
+              <b>problems? weaknesses? milestones?</b>
             </p>
             <aside class="notes">
               <pre>
+single point of failure
+uploads is slow
+changes may break all
+merging is painful
               </pre>
             </aside>
           </section>
@@ -168,32 +170,13 @@ You can reproduce and understand a bug report on a past version of your software
           <section>
             <h3>Distributed version control diagram</h3>
             <p>
-              <img class="no-border" src="http://git-scm.com/book/en/v2/book/01-introduction/images/distributed.png" width="50%" />
+              <img class="no-border" src="http://new.tinygrab.com/7020c0e8b0d7c0e942139e52d8c801e7c1bc7b141f.png" width="60%" />
             </p>
             <aside class="notes">
               <pre>
-              </pre>
-            </aside>
-          </section>
-        </section>
-
-        <section>
-          <section>
-            <h3>Repositories and working copies</h3>
-            <p>
-              <b>Repository</b> - a database of changes<br/>
-              <b>working copy</b> - a local copy of Repository<br/>
-
-              <br/>
-
-              <img class="no-border" src="https://homes.cs.washington.edu/~mernst/advice/version-control-fig1.png" width="25%" />
-            </p>
-            <aside class="notes">
-              <pre>
-working copy = checkout == is your personal copy of all the files in the project
-
-make arbitrary edits to this copy, without affecting your teammates
-When you are happy with your edits, you commit your changes to a repository
+Розподілена
+no network needed
+fast (since local)
               </pre>
             </aside>
           </section>
@@ -202,6 +185,10 @@ When you are happy with your edits, you commit your changes to a repository
         <section>
           <section>
             <h2>Terms</h2>
+
+            <p>
+              <img src="http://new.tinygrab.com/7020c0e8b036df3159a038524980684f34253a24f3.png" class="no-border" />
+            </p>
           </section>
 
           <section>
@@ -213,7 +200,7 @@ When you are happy with your edits, you commit your changes to a repository
               <br/>
               <br/>
 
-              local repository and the central repository
+              <b>local repository</b> and the <b>central (remote) repository</b>
 
               <br/>
 
@@ -224,9 +211,8 @@ When you are happy with your edits, you commit your changes to a repository
           <section>
             <h2>Working copy (checkout)</h2>
             <p>
-              your personal copy of repository
+              your personal (local) copy of repository
 
-              <br/>
               <br/>
 
               <img class="no-border" src="http://www.darwinbiler.com/assets/2-tree-New-Page.jpeg" />
@@ -236,7 +222,7 @@ When you are happy with your edits, you commit your changes to a repository
           <section>
             <h2>Checkout / Clone</h2>
             <p>
-              action, to copy a remote repository to your local
+              action to copy a remote repository to your local
             </p>
           </section>
 
@@ -249,7 +235,14 @@ When you are happy with your edits, you commit your changes to a repository
           </section>
 
           <section>
-            <h2>Update</h2>
+            <h2>Revision</h2>
+            <p>
+              a version of document
+            </p>
+          </section>
+
+          <section>
+            <h2>Update (git pull)</h2>
             <p>
               action, that you made to make your working copy up-to-date with remote repository
             </p>
@@ -265,7 +258,7 @@ When you are happy with your edits, you commit your changes to a repository
           <section>
             <h2>Branching</h2>
             <p>
-              <img class="no-border" src="https://homes.cs.washington.edu/~mernst/advice/version-control-fig4.png" />
+              <img class="no-border" src="https://homes.cs.washington.edu/~mernst/advice/version-control-fig4.png" width="100%" />
             </p>
           </section>
 
@@ -275,9 +268,15 @@ When you are happy with your edits, you commit your changes to a repository
               a copy of repository
 
               <br/>
-              <br/>
 
-              <img class="no-border" src="http://blog.codinghorror.com/content/images/uploads/2007/10/6a0120a85dcdae970b0120a86da788970b-pi.png" />
+              <img class="no-border" src="http://blog.codinghorror.com/content/images/uploads/2007/10/6a0120a85dcdae970b0120a86da788970b-pi.png" width="100%" />
+            </p>
+          </section>
+
+          <section>
+            <h2>Trunk / Master</h2>
+            <p>
+              a main branch for work
             </p>
           </section>
 
@@ -297,6 +296,11 @@ When you are happy with your edits, you commit your changes to a repository
             <h2>Head</h2>
             <p>
               a latest version for branch
+
+              <br/>
+              <br/>
+
+              <img class="no-border" src="http://i.stack.imgur.com/eAo7u.png" />
             </p>
           </section>
 
@@ -313,55 +317,43 @@ When you are happy with your edits, you commit your changes to a repository
           </section>
 
           <section>
-            <h2>Revision</h2>
-            <p>
-              a version of document
-            </p>
-          </section>
-
-          <section>
             <h2>Tag</h2>
             <p>
               a label for specific version of document
-            </p>
-          </section>
-
-          <section>
-            <h2>Trunk / Master</h2>
-            <p>
-              a main branch for work
             </p>
           </section>
         </section>
 
         <section>
           <section>
+          <h2>Distributed vs Centralized</h2>
+          <p>
+            <iframe width="854" height="480" src="https://www.youtube.com/embed/_yQlKEq-Ueg" frameborder="0" allowfullscreen></iframe>
+          </p>
+          </section>
+
+          <section>
             <h2>Distributed and centralized version control</h2>
             <p>
               <ul>
                 <li>centralized
                   <br/>
-                  <small>exmaple: Subversion</small>
+                  <small>example: Subversion</small>
 
                 <li>distributed (DVSC)
                   <br/>
                   <small>more modern, runs faster, is less prone to errors, has more features, more complex to understand</small>
                   <br/>
-                  <small>exmaple: Mercurial, Git</small>
+                  <small>example: Mercurial, Git</small>
               </ul>
             </p>
             <aside class="notes">
               <pre>
-Децентралізовані
+централізовані
+децентралізовані
 is the number of repositories
               </pre>
             </aside>
-          </section>
-
-          <section>
-            <p>
-              <img class="no-border" src="http://www.depo.ua/static/files/gallery_uploads/images/0%D0%B2%D0%BE%D0%BA%D0%B7%D0%B0%D0%BB.jpg" />
-            </p>
           </section>
 
           <section>
@@ -382,7 +374,7 @@ is the number of repositories
             </p>
             <aside class="notes">
               <pre>
-there is just one central repository
+є один центральний репозиторій
               </pre>
             </aside>
           </section>
@@ -392,22 +384,21 @@ there is just one central repository
               <img class="no-border" src="https://homes.cs.washington.edu/~mernst/advice/version-control-fig3.png" />
 
               <br/>
-              <br/>
 
               there are multiple repositories
 
               <br/>
 
               <ul>
-                <li>You commit
-                <li>You push
-                <li>They pull
-                <li>They update
+                <li>You commit <small>(to your local)</small>
+                <li>You push <small>(to remote)</small>
+                <li>They pull <small>(from remove)</small>
+                <li>They update <small>(to their local)</small>
               </ul>
             </p>
             <aside class="notes">
               <pre>
-each user gets his or her own repository and working copy
+в кожного користувача є своя копія репозиторію на локалці
               </pre>
             </aside>
           </section>
@@ -415,21 +406,29 @@ each user gets his or her own repository and working copy
 
         <section>
           <section>
+            <h2>Merge: a diff</h2>
+            <p>
+              <img class="no-border" src="http://i.stack.imgur.com/EXBCm.png" />
+            </p>
+          </section>
+
+          <section>
+            <h2>Merge</h2>
+            <p>
+              <img class="no-border" src="http://fiji.sc/_images/9/9d/Meld-example.png" width="100%" />
+            </p>
+          </section>
+
+          <section>
             <h2>Conflicts</h2>
             <p>
               the final version is a merge of original version and edit.
               <br/>
               <br/>
               occurs when two different users make simultaneous, different changes to the same line of a file
-            </p>
-          </section>
-        </section>
+              <br/>
 
-        <section>
-          <section>
-            <h2>Merging changes</h2>
-            <p>
-              
+              <img src="http://naleid.com/images/2012/01/kdiff3_merge_window_fixed.png" class="no-border" width="100%" />
             </p>
           </section>
         </section>
@@ -439,7 +438,33 @@ each user gets his or her own repository and working copy
             <h2></h2>
             <p>
               <img class="no-border" src="http://new.tinygrab.com/7020c0e8b0c2b4066ea54b1c6fa877b62803b8b56b.png" />
+
+              <br/>
+
+              <div style="text-align: left">
+                <b>RCS</b> - pessimistic approach, "ci" and "co" actions
+                <br/>
+                <b>CVS</b> - multiple users, concurrent
+                <br/>
+                <b>SVN</b> - as tree
+                <br/>
+                <b>Git</b> - distributed, branching model, git-flow, rev checksums
+              </div>
             </p>
+            <aside class="notes">
+Revision Control System - одна з перших реалізацій
+вона зберігає повну історію змін
+алгоритм дельта-компресії (зберігається тільки перша версія і всі міжверсійні зміни)
+бінарних файлів без компресії
+не має засобів для колективної роботи над набором файлів
+
+Concurrent Versions System
+Система одночасних версій
+колективна робота над файлами
+stores the history for each file
+assigns sequential version numbers to each file (1,2,3,..)
+
+            </aside>
           </section>
         </section>
 
@@ -448,7 +473,7 @@ each user gets his or her own repository and working copy
             <h2>General Workflow</h2>
             <aside class="notes">
               <pre>
-Каждая система управления версиями имеет свои специфические особенности
+кожна система контролю версій має свою специфіку
               </pre>
             </aside>
           </section>
@@ -456,9 +481,9 @@ each user gets his or her own repository and working copy
           <section>
             <h2>Initial initialization</h2>
             <p>
-              clone the project (tree of files/directories)<br/>
-              from remote to local (filesystem)<br/>
-              with specific version
+              <b>clone</b> the project (tree of files/directories)<br/>
+              <b>from</b> remote to local (filesystem)<br/>
+              <b>with</b> specific version
             </p>
           </section>
 
@@ -466,9 +491,9 @@ each user gets his or her own repository and working copy
             <h2>The Daily Cycle</h2>
             <p>
               <ul>
-                <li>update the local copy to latest
-                <li>make changes on local
-                <li>sharing (saving) local changes with others
+                <li><b>update</b> the local copy to latest
+                <li><b>make</b> changes on local
+                <li><b>sharing</b> (saving) local changes with others
               </ul>
             </p>
           </section>
@@ -543,6 +568,49 @@ each user gets his or her own repository and working copy
                 <li>object database
                 <li>references
               </ul>
+            </p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Git flow</h2>
+            <p>
+              <img src="http://ic.pics.livejournal.com/w32blaster/10219455/96738/96738_original.png" class="no-border" width="100%" />
+            </p>
+            <aside class="notes">
+цикле разработки через Github
+на командах разного размера
+            </aside>
+          </section>
+
+          <section>
+            <h2>Git flow (simple)</h2>
+            <p>
+              <ul>
+                <li>branches: master & dev
+                <li>master - stable, dev - working
+                <li>detailed commit message (with issue ticket)
+                <li>pull requests (for code review)
+                <li>dev automatically to testing server
+                <li>master release
+              </ul>
+            </p>
+          </section>
+
+          <section>
+            <h2>Git flow (simple)</h2>
+            <p>
+              <ul>
+                <li>feature branches
+                <li>release branches
+                <li>hotfix branches
+              </ul>
+
+              <br/>
+              <br/>
+
+              <b>from where? to where?</b>
             </p>
           </section>
         </section>
