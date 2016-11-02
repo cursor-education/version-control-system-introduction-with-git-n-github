@@ -17,7 +17,7 @@
       <div class="slides">
 
         <section
-          data-background="http://i.stack.imgur.com/XsBZC.png"
+          data-background="https://www.dropbox.com/s/p2dcx6lnukvzf4c/0-slide-background.png?raw=1"
           data-background-repeat="repeat"
           data-opacity="0.3"
           class="section-black section-black-bg"
@@ -47,9 +47,10 @@ Mercurial (Hg), Git, and Subversion (SVN)
           <h2>Agenda</h2>
           <p>
             <ul>
-              <li>Version Control System (VCS)
+              <li>Generations of Version Control Systems
+              <li>DAG & VCS
+              <li>Basic operations & terms
               <li>SVN overview
-              <li>Mercurial overview
               <li>Git \w commands
               <li>Branches, Merging and Conflicts
               <li>Github.com
@@ -63,11 +64,11 @@ Mercurial (Hg), Git, and Subversion (SVN)
           <section>
             <h2>Generatios</h2>
             <p>
-              <ul style="font-size:25px">
-                <li>0gen - No VC
-                <li>1gen - File locks
-                <li>2gen - CVCS (Centralized)
-                <li>3gen - DVCS (Distributed)
+              <ul style="font-size:30px">
+                <li>0gen - <b>No VC</b>
+                <li>1gen - <b>File locks</b>
+                <li>2gen - <b>CVCS (Centralized)</b>
+                <li>3gen - <b>DVCS (Distributed)</b>
               </ul>
             </p>
             <aside class="notes">
@@ -89,7 +90,7 @@ Mercurial (Hg), Git, and Subversion (SVN)
       
         <section>
           <section>
-            <h2>Purposes</h2>
+            <h2>Purposes?</h2>
             <p>
               <h4>Version/Revision Control System</h4>
 
@@ -143,11 +144,11 @@ Mercurial (Hg), Git, and Subversion (SVN)
           <section>
             <h2>Generation 0</h2>
             <p>
-              Without version control - backup.zip.
+              Without version control - <b>backup.zip</b>
               <br/><br/>
-              One developer - ok.<br/>
-              Two developers - danger!<br/>
-              Five developers - madness!
+              <span style="color:green">One developer - ok.</span><br/>
+              <span style="color:#971d1d">Two developers - danger!</span><br/>
+              <span style="color:red; font-weight:bold;">Five developers - madness!</span>
             </p>
             <aside class="notes">
               <pre>
@@ -187,38 +188,6 @@ cons: copy-paste, speed, manual<br/>
             <p>
               <img src="https://backlogtool.com/git-guide/en/img/post/intro/capture_intro1_1_2.png" width="50%" />
             </p>
-          </section>
-
-          <section>
-            <h2>Centralized version control diagram</h2>
-            <p>
-              <img src="http://new.tinygrab.com/7020c0e8b0682abff9a5e19670fffb76ddc6ad6280.png" width="60%" />
-
-              <br/>
-              <b>problems? weaknesses? milestones?</b>
-            </p>
-            <aside class="notes">
-              <pre>
-single point of failure
-uploads is slow
-changes may break all
-merging is painful
-              </pre>
-            </aside>
-          </section>
-
-          <section>
-            <h2>Distributed version control diagram</h2>
-            <p>
-              <img src="http://new.tinygrab.com/7020c0e8b0d7c0e942139e52d8c801e7c1bc7b141f.png" width="60%" />
-            </p>
-            <aside class="notes">
-              <pre>
-Розподілена
-no network needed
-fast (since local)
-              </pre>
-            </aside>
           </section>
         </section>
 
@@ -326,6 +295,7 @@ child, parent
 3 is child of 2 (means 2 is parent for 3)
               </pre>
             </aside>
+          </section>
 
           <section>
             <h2>Directed Acyclic Graph</h2>
@@ -374,7 +344,40 @@ each node == commit
               </pre>
             </aside>
           </section>
+        </section>
 
+        <section>
+          <section>
+            <h2>Centralized version control diagram</h2>
+            <p>
+              <img src="http://new.tinygrab.com/7020c0e8b0682abff9a5e19670fffb76ddc6ad6280.png" width="60%" />
+
+              <br/>
+              <b>problems? weaknesses? milestones?</b>
+            </p>
+            <aside class="notes">
+              <pre>
+single point of failure
+uploads is slow
+changes may break all
+merging is painful
+              </pre>
+            </aside>
+          </section>
+
+          <section>
+            <h2>Distributed version control diagram</h2>
+            <p>
+              <img src="http://new.tinygrab.com/7020c0e8b0d7c0e942139e52d8c801e7c1bc7b141f.png" width="60%" />
+            </p>
+            <aside class="notes">
+              <pre>
+Розподілена
+no network needed
+fast (since local)
+              </pre>
+            </aside>
+          </section>
         </section>
   
         <section>
