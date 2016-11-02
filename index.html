@@ -17,21 +17,21 @@
       <div class="slides">
 
         <section
-          data-background="http://random.fennecfoxen.org/screenshots/git.png"
+          data-background="http://i.stack.imgur.com/XsBZC.png"
           data-background-repeat="repeat"
           data-opacity="0.3"
           class="section-black section-black-bg"
         >
           <h2>
             Version Control System.<br/>
-            Introduction with github.
+            DVCS, Git, tips and tricks.
           </h2>
 
           <h4>
             <a href="http://github.com/itspoma" target="_blank">@itspoma</a> / <a href="http://cursor.education/" target="_blank">CURSOR Education</a>
           </h4>
           
-          <h4 class="version">v1.8</h4>
+          <h4 class="version">v1.91</h4>
 
           <aside class="notes">
             <pre>
@@ -61,19 +61,18 @@ Mercurial (Hg), Git, and Subversion (SVN)
 
         <section>
           <section>
-            <h2>VCS: Purposes</h2>
+            <h2>Generatios</h2>
             <p>
-              <h4>Version/Revision Control System</h4>
-
-              <ul>
-                <li>enables multiple people to simultaneously work on a single project
-                <li>integrates work done simultaneously by different team members
-                <li>gives access to historical versions of your project
+              <ul style="font-size:25px">
+                <li>0gen - No VC
+                <li>1gen - File locks
+                <li>2gen - CVCS (Centralized)
+                <li>3gen - DVCS (Distributed)
               </ul>
             </p>
             <aside class="notes">
               <pre>
-програма для роботи з інф що змінюється
+програма для роботи з інформаціює, що змінюється
 
 проблема: multiple developers
 кожен - редагує свою копію файлів, і вибирає шо розшарити з іншими
@@ -86,9 +85,29 @@ Mercurial (Hg), Git, and Subversion (SVN)
               </pre>
             </aside>
           </section>
+        </section>
+      
+        <section>
+          <section>
+            <h2>Purposes</h2>
+            <p>
+              <h4>Version/Revision Control System</h4>
+
+              <ul>
+                <li>allows multiple people to work on a single project in the same time
+                <li>integrates work done simultaneously by different team members
+                <li>gives access to historical versions of your project
+              </ul>
+            </p>
+            <aside class="notes">
+              <pre>
+
+              </pre>
+            </aside>
+          </section>
 
           <section>
-            <h2>ex.: Wikipedia history of changes</h2>
+            <h2>example: Wikipedia history of changes</h2>
             <p>
               <img src="http://courseware.hbs.edu/public/cases/wikipedia/images/exhibit7.jpg" width="70%" />
             </p>
@@ -99,29 +118,51 @@ Mercurial (Hg), Git, and Subversion (SVN)
           </section>
 
           <section>
-            <h2>ex.: history panel in Photoshop</h2>
+            <h2>example: history panel in Photoshop</h2>
             <p>
               <img src="http://simplykellydesigns.com/blog/wp-content/uploads/2011/07/HistoryWindow.jpg" />
             </p>
           </section>
           
           <section>
-            <h2>ex.: Wordpress rollback post</h2>
+            <h2>example: Wordpress rollback post</h2>
             <p>
               <img src="http://new.tinygrab.com/7020c0e8b034a9fc62716a67bbed6de510486c9073.png" />
             </p>
           </section>
           
           <section>
-            <h2>ex.: Wordpress rollback post</h2>
+            <h2>example: Wordpress previous post diff</h2>
             <p>
               <img src="https://i2.wp.com/en.support.files.wordpress.com/2008/12/compare-revisions-2.png" />
             </p>
           </section>
-          
         </section>
 
         <section>
+          <section>
+            <h2>Generation 0</h2>
+            <p>
+              Without version control - backup.zip.
+              <br/><br/>
+              One developer - ok.<br/>
+              Two developers - danger!<br/>
+              Five developers - madness!
+            </p>
+            <aside class="notes">
+              <pre>
+коли ви працюєте самі на проекті (без команди)
+              </pre>
+            </aside>
+          </section>
+          
+          <section>
+            <h2>No VC</h2>
+            <p>
+              <img src="https://dl.dropboxusercontent.com/spa/3wo62sfm2mbj31o/y3z2g1wk.png" width="80%" />
+            </p>
+          </section>
+  
           <section>
             <h2>Local version control</h2>
             <p>
@@ -176,6 +217,259 @@ merging is painful
 Розподілена
 no network needed
 fast (since local)
+              </pre>
+            </aside>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Generation 1 - File Locks</h2>
+            <p>
+               <img src="https://dl.dropboxusercontent.com/spa/3wo62sfm2mbj31o/_3xa9idb.png" width="80%" />
+            </p>
+            <aside class="notes">
+              <pre>
+file lock - один дев блокує файл, і робить зміни
+              </pre>
+            </aside>
+          </section>
+        </section>
+  
+        <section>
+          <section>
+            <h2>Generation 2 - Central VCS</h2>
+            <p>
+               <img src="https://dl.dropboxusercontent.com/spa/3wo62sfm2mbj31o/r91x9nz0.png" width="80%" />
+            </p>
+            <aside class="notes">
+              <pre>
+idea - merge before commit
+              </pre>
+            </aside>
+          </section>
+          
+          <section>
+            <img src="https://dl.dropboxusercontent.com/spa/3wo62sfm2mbj31o/7j4kkcrv.png" width="80%" />
+          </section>
+          
+          <section>
+            <img src="https://dl.dropboxusercontent.com/spa/3wo62sfm2mbj31o/us2fqs4e.png" width="80%" />
+          </section>
+          
+          <section>
+            <img src="https://dl.dropboxusercontent.com/spa/3wo62sfm2mbj31o/us2fqs4e.png" width="80%" />
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Generation 3 - DVCS</h2>
+            <p>
+               <img src="https://dl.dropboxusercontent.com/spa/3wo62sfm2mbj31o/o7pbbo7i.png" width="80%" />
+            </p>
+            <aside class="notes">
+              <pre>
+idea - commit before merge
+              </pre>
+            </aside>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>DAG</h2>
+
+            <p>
+              <h4>Directed acyclic graph</h4>
+
+              <img src="https://upload.wikimedia.org/wikipedia/commons/4/4b/Directed_acyclic_graph.svg" width="50%" />
+            </p>
+          
+            <aside class="notes">
+              <pre>
+Directed acyclic graph (Спрямований ациклічний граф)
+здатися складним
+              </pre>
+            </aside>
+          </section>
+  
+          <section>
+            <h2>Graph</h2>
+
+            <p>
+              <h4>Nodes & lines (edges)</h4>
+
+              <img src="https://dl.dropboxusercontent.com/spa/3wo62sfm2mbj31o/ztdc0ll8.png" width="50%" />
+            </p>
+          
+            <aside class="notes">
+              <pre>
+вузли і ребра
+              </pre>
+            </aside>
+          </section>
+
+          <section>
+            <h2>Directed Graph</h2>
+
+            <p>
+              <h4>Lines have arrows (directed edges)</h4>
+
+              <img src="https://dl.dropboxusercontent.com/spa/3wo62sfm2mbj31o/txtbua4a.png" width="50%" />
+            </p>
+          
+            <aside class="notes">
+              <pre>
+направлені частини
+child, parent
+3 is child of 2 (means 2 is parent for 3)
+              </pre>
+            </aside>
+
+          <section>
+            <h2>Directed Acyclic Graph</h2>
+
+            <p>
+              <img src="https://dl.dropboxusercontent.com/spa/3wo62sfm2mbj31o/ytm4nl0k.png" width="50%" />
+            </p>
+          
+            <aside class="notes">
+              <pre>
+              </pre>
+            </aside>
+          </section>
+
+          <section>
+            <h2>example of Directed Acyclic Graph</h2>
+
+            <p>
+              <img src="https://dl.dropboxusercontent.com/spa/3wo62sfm2mbj31o/y3euv_0r.png" width="50%" />
+            </p>
+          
+            <aside class="notes">
+              <pre>
+this is a valid DAG
+"1" - "root" (кореневий вузол), завжди єдиний
+"2" - дочірній вузол, те шо в VCS називаємо бренч
+в "2" є 3 бренчі: "3", "4", "5" (розгалуження)
+"7" це мердж, бо має декілька батьків ("4" і "5")
+ноди "8" та "9" - це head
+              </pre>
+            </aside>
+          </section>
+
+          <section>
+            <h2>DAG in VCS</h2>
+
+            <p>
+              <img src="https://dl.dropboxusercontent.com/spa/3wo62sfm2mbj31o/rz-_o7_r.png" width="50%" />
+            </p>
+          
+            <aside class="notes">
+              <pre>
+each node == commit
+"3" похідний від "2"
+кожен ідентифікується sha1 від (контент + батьківська нода)
+              </pre>
+            </aside>
+          </section>
+
+        </section>
+  
+        <section>
+          <section>
+            <h2>Basic operations</h2>
+
+            <p>
+              <ul>
+                <li>Clone
+                <li>Commit
+                <li>Push
+                <li>Pull
+                <li>Merge
+              </ul>
+            </p>
+          </section>
+
+          <section>
+            <h2>Clone</h2>
+
+            <p>
+              <img src="https://dl.dropboxusercontent.com/spa/3wo62sfm2mbj31o/hk0ful71.png" width="80%" />
+            </p>
+            
+            <aside class="notes">
+              <pre>
+to get the code from server
+              </pre>
+            </aside>
+          </section>
+
+          <section>
+            <h2>Local Commits</h2>
+
+            <p>
+              <img src="https://dl.dropboxusercontent.com/spa/3wo62sfm2mbj31o/jrx2tq0b.png" width="80%" />
+            </p>
+            
+            <aside class="notes">
+              <pre>
+              </pre>
+            </aside>
+          </section>
+
+          <section>
+            <h2>Push to Server</h2>
+
+            <p>
+              <img src="https://dl.dropboxusercontent.com/spa/3wo62sfm2mbj31o/mdp1j0-f.png" width="80%" />
+            </p>
+            
+            <aside class="notes">
+              <pre>
+server & client are not synchronized
+              </pre>
+            </aside>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Branches</h2>
+
+            <p>
+              <ul>
+                <li>Clones
+                <li>Labels
+              </ul>
+            </p>
+          </section>
+
+          <section>
+            <h2>Branches</h2>
+
+            <p>
+              <img src="https://dl.dropboxusercontent.com/spa/3wo62sfm2mbj31o/qrc2f1h1.png" width="80%" />
+            </p>
+            
+            <aside class="notes">
+              <pre>
+on local! server still doesn't know about changes
+              </pre>
+            </aside>
+          </section>
+
+          <section>
+            <h2>Labels as Branches</h2>
+
+            <p>
+              <img src="https://dl.dropboxusercontent.com/spa/3wo62sfm2mbj31o/dl1p6qtm.png" width="80%" />
+            </p>
+            
+            <aside class="notes">
+              <pre>
+
               </pre>
             </aside>
           </section>
@@ -1159,6 +1453,11 @@ to avoid conflicts
           <h2>Additional materials</h2>
           <p>
             <ul style="font-size:25px">
+              <li>
+                <b>Version Control by Example</b>
+                <br/>
+                <a href="http://ericsink.com/vcbe/html/index.html" target="_blank">http://ericsink.com/vcbe/html/index.html</a>
+              
               <li>
                 <b>Try Git with Github</b>
                 <br/>
