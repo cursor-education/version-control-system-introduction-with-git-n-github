@@ -86,6 +86,39 @@ Mercurial (Hg), Git, and Subversion (SVN)
               </pre>
             </aside>
           </section>
+      
+          <section>
+            <h2></h2>
+            <p>
+              <img src="http://new.tinygrab.com/7020c0e8b0c2b4066ea54b1c6fa877b62803b8b56b.png" />
+
+              <br/>
+
+              <div style="text-align: left">
+                <b>RCS</b> - pessimistic approach, "ci" and "co" actions
+                <br/>
+                <b>CVS</b> - multiple users, concurrent
+                <br/>
+                <b>SVN</b> - as tree
+                <br/>
+                <b>Git</b> - distributed, branching model, git-flow, rev checksums
+              </div>
+            </p>
+            <aside class="notes">
+Revision Control System - одна з перших реалізацій
+вона зберігає повну історію змін
+алгоритм дельта-компресії (зберігається тільки перша версія і всі міжверсійні зміни)
+бінарних файлів без компресії
+не має засобів для колективної роботи над набором файлів
+
+Concurrent Versions System
+Система одночасних версій
+колективна робота над файлами
+stores the history for each file
+assigns sequential version numbers to each file (1,2,3,..)
+
+            </aside>
+          </section>
         </section>
       
         <section>
@@ -397,7 +430,7 @@ each node == commit
             <h2>Clone</h2>
 
             <p>
-              <img src="https://dl.dropboxusercontent.com/spa/3wo62sfm2mbj31o/hk0ful71.png" width="80%" />
+              <img src="https://dl.dropboxusercontent.com/spa/3wo62sfm2mbj31o/hk0ful71.png" width="70%" />
             </p>
             
             <aside class="notes">
@@ -478,7 +511,7 @@ on local! server still doesn't know about changes
 
         <section>
           <section>
-            <h2>Terms</h2>
+            <h2>Essentials terms</h2>
 
             <p>
               <img src="http://new.tinygrab.com/7020c0e8b036df3159a038524980684f34253a24f3.png" />
@@ -509,7 +542,7 @@ on local! server still doesn't know about changes
 
               <br/>
 
-              <img src="http://www.darwinbiler.com/assets/2-tree-New-Page.jpeg" />
+              <img src="http://pages.cs.wisc.edu/~driscoll/software/vcs/one-repo-central.png" />
             </p>
           </section>
 
@@ -525,6 +558,7 @@ on local! server still doesn't know about changes
             <p>
               action, that you made to share your changes with other teammates.<br/>
               uploading your local changes to repository
+              <br/>
               <br/>
               <img src="https://backlogtool.com/git-guide/en/img/post/intro/capture_intro1_3_1.png" width="60%" />
             </p>
@@ -731,41 +765,6 @@ is the number of repositories
 
         <section>
           <section>
-            <h2></h2>
-            <p>
-              <img src="http://new.tinygrab.com/7020c0e8b0c2b4066ea54b1c6fa877b62803b8b56b.png" />
-
-              <br/>
-
-              <div style="text-align: left">
-                <b>RCS</b> - pessimistic approach, "ci" and "co" actions
-                <br/>
-                <b>CVS</b> - multiple users, concurrent
-                <br/>
-                <b>SVN</b> - as tree
-                <br/>
-                <b>Git</b> - distributed, branching model, git-flow, rev checksums
-              </div>
-            </p>
-            <aside class="notes">
-Revision Control System - одна з перших реалізацій
-вона зберігає повну історію змін
-алгоритм дельта-компресії (зберігається тільки перша версія і всі міжверсійні зміни)
-бінарних файлів без компресії
-не має засобів для колективної роботи над набором файлів
-
-Concurrent Versions System
-Система одночасних версій
-колективна робота над файлами
-stores the history for each file
-assigns sequential version numbers to each file (1,2,3,..)
-
-            </aside>
-          </section>
-        </section>
-
-        <section>
-          <section>
             <h2>General Workflow</h2>
             <aside class="notes">
               <pre>
@@ -798,7 +797,7 @@ assigns sequential version numbers to each file (1,2,3,..)
         <section>
           <section>
             <p>
-              <img src="https://dl.dropboxusercontent.com/spa/3wo62sfm2mbj31o/fq7zvb0e.png" />
+              <img src="https://dl.dropboxusercontent.com/spa/3wo62sfm2mbj31o/pe6eyaqo.png" />
             </p>
           </section>
 
@@ -865,6 +864,51 @@ assigns sequential version numbers to each file (1,2,3,..)
                 <li>references
               </ul>
             </p>
+          </section>
+        </section>
+
+        <section>
+          <section>
+            <h2>Hash functions</h2>
+            <p>
+              Any sequence of bytes -> (hash function) -> hash
+            </p>
+          </section>
+          
+          <section>
+            <h2>SHA1</h2>
+            <p>
+              <img src="https://dl.dropboxusercontent.com/spa/3wo62sfm2mbj31o/ajyfou79.png" width="80%" />
+            </p>
+            <aside class="notes">
+              <pre>
+$ echo "Apple Pie" | git hash-object --stdin
+$ echo "Apple Pie\n" | git hash-object --stdin
+              </pre>
+            </aside>
+          </section>
+
+          <section>
+            <h2>Git & SHA1</h2>
+            <p>
+              Every object (commit, state, action) has own SHA1.
+            </p>
+            <aside class="notes">
+              <pre>
+              </pre>
+            </aside>
+          </section>
+          
+
+          <section>
+            <h2>SHA1 Collisions</h2>
+            <p>
+              1 chanse in 175.000.000
+            </p>
+            <aside class="notes">
+              <pre>
+              </pre>
+            </aside>
           </section>
         </section>
 
