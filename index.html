@@ -219,6 +219,24 @@ idea - merge before commit
           </section>
           
           <section>
+            <h2>Centralized version control diagram</h2>
+            <p>
+              <img src="http://new.tinygrab.com/7020c0e8b0682abff9a5e19670fffb76ddc6ad6280.png" width="60%" />
+
+              <br/>
+              <b>problems? weaknesses? milestones?</b>
+            </p>
+            <aside class="notes">
+              <pre>
+single point of failure
+uploads is slow
+changes may break all
+merging is painful
+              </pre>
+            </aside>
+          </section>
+          
+          <section>
             <img src="https://dl.dropboxusercontent.com/spa/3wo62sfm2mbj31o/7j4kkcrv.png" width="80%" />
           </section>
           
@@ -240,6 +258,20 @@ idea - merge before commit
             <aside class="notes">
               <pre>
 idea - commit before merge
+              </pre>
+            </aside>
+          </section>
+          
+          <section>
+            <h2>Distributed version control diagram</h2>
+            <p>
+              <img src="http://new.tinygrab.com/7020c0e8b0d7c0e942139e52d8c801e7c1bc7b141f.png" width="60%" />
+            </p>
+            <aside class="notes">
+              <pre>
+Розподілена
+no network needed
+fast (since local)
               </pre>
             </aside>
           </section>
@@ -341,40 +373,6 @@ this is a valid DAG
 each node == commit
 "3" похідний від "2"
 кожен ідентифікується sha1 від (контент + батьківська нода)
-              </pre>
-            </aside>
-          </section>
-        </section>
-
-        <section>
-          <section>
-            <h2>Centralized version control diagram</h2>
-            <p>
-              <img src="http://new.tinygrab.com/7020c0e8b0682abff9a5e19670fffb76ddc6ad6280.png" width="60%" />
-
-              <br/>
-              <b>problems? weaknesses? milestones?</b>
-            </p>
-            <aside class="notes">
-              <pre>
-single point of failure
-uploads is slow
-changes may break all
-merging is painful
-              </pre>
-            </aside>
-          </section>
-
-          <section>
-            <h2>Distributed version control diagram</h2>
-            <p>
-              <img src="http://new.tinygrab.com/7020c0e8b0d7c0e942139e52d8c801e7c1bc7b141f.png" width="60%" />
-            </p>
-            <aside class="notes">
-              <pre>
-Розподілена
-no network needed
-fast (since local)
               </pre>
             </aside>
           </section>
